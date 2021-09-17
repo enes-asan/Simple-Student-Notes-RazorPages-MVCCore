@@ -1,0 +1,33 @@
+﻿@page
+@model StudentNotesRazorPages.Pages.CreateModel
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2 class="text-center text-danger mt-2">Add New Student</h2>
+            </div>
+            <div class="col-5 border bg-warning mt-3">
+                <form method="post">
+                    <div asp-validation-summary="All"></div>
+                    <label asp-for="Student.FirstName"></label><input type="text" asp-for="Student.FirstName" class="form-control" /><br />
+                    <label asp-for="Student.LastName"></label><input type="text" asp-for="Student.LastName" class="form-control" /><br />
+                    <label asp-for="Student.Class"></label><input type="text" asp-for="Student.Class" class="form-control" /><br />
+                    <label asp-for="Student.CourseName"></label><input type="text" asp-for="Student.CourseName" class="form-control" /><br />
+                    <label asp-for="Student.MidtermExam"></label><input type="text" asp-for="Student.MidtermExam" class="form-control" /><br />
+                    <label asp-for="Student.FinalExam"></label><input type="text" asp-for="Student.FinalExam" class="form-control" /><br />
+                    <input type="submit" value="Add" class="btn btn-primary form-control mb-3" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
